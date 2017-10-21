@@ -144,12 +144,8 @@ I then recorded one lap driving on opposite direction.
 
 I then recorded the vehicle recovering from the left side and right sides of the road back to center so that the vehicle would learn to recover when the car is too close to one road side. These images show what a recovery looks like starting from positions and directions that need immediate steering changes :
 
-The recorded video of recovering from right:
-[![](./images/recover-right.mp4)](https://github.com/chunhui-shi/CarND-Behavioral-Cloning-P3/blob/master/images/recover-right.mp4)
-
-The recorded video of recovering for turn 2:
-[![](./images/recover-turn2.mp4)](https://github.com/chunhui-shi/CarND-Behavioral-Cloning-P3/blob/master/images/recover-turn2.mp4)
-
+Click the link to download the recorded video of [recovering from right](./images/recover-right.mp4).
+Click the link to download the recorded video of [recovering for turn 2](./images/recover-turn2.mp4)
 
 The data sets include 2 laps on anti-clock-wise direction, one lap on close-wise direction, two sets for recovering from left and right, and three sets for the three turns in the lap.
 
@@ -162,3 +158,9 @@ After the collection process, I had more than 20K number of data points. I then 
 I finally randomly shuffled the data set and put 10% of the data into a validation set. 
 
 I used this training data for training the model. The validation set helped determine if the model was over or under fitting. The ideal number of epochs was 4 as evidenced by the validation loss reach a value and no more improvement could acheived. I used an adam optimizer so that manually training the learning rate wasn't necessary.
+
+#### 4. Conclusion
+
+It became clear in the process of this project that collecting data and preprocessing the data is the key for successful training. Due to the limit of computing resource (Mac laptop), the images could be processed were kept under 40K, and I also have GPU enabled tensorflow installed on my Mac, it still took ~15 minutes to train a model. And if one model was not working well at some spots, adding or replacing recovery data was tried many times.
+
+So far tuning the traiing process is an art to me. How to obtain insights into the model, and use that insight to guide next steps could have been very helpful to have much more efficient training process.
